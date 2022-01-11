@@ -33,7 +33,12 @@ export async function writePoem(options: PoemOptions) {
     content = poem({ template: temp });
   } else {
     spinner.start('Auto create poem by random');
-    content = poem();
+    const randomType = Math.round(Math.random());
+    if (randomType > 0) {
+      content = poem();
+    } else {
+      content = getModenPoem();
+    }
   }
 
   if (content) {

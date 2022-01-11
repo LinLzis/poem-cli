@@ -1,4 +1,4 @@
-import { data } from './data';
+import data from './data/data.json';
 
 const temps = [
   // 五言绝句， 平起式， 正格：
@@ -123,6 +123,7 @@ function getModenPoem(birthday?: number) {
   for (let i = 0; i <= line; i++) {
     const current = Math.floor(Math.random() * (tempData.length - 1));
     content += `${tempData[current]}\n`;
+    // 为避免重复，临时数据中删除已选中的分句
     tempData.splice(current, 1);
   }
   return content;
