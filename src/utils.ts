@@ -1,4 +1,4 @@
-import data from './data/data.json';
+import data from './data.json';
 
 const temps = [
   // 五言绝句， 平起式， 正格：
