@@ -3,7 +3,7 @@ import { PoemOptions } from './types';
 import poem from 'poemhub';
 import { getModenPoem, getRandomTemplate, getTemplate } from './utils';
 
-export async function getPoem(options: PoemOptions) {
+export function getPoem(options: PoemOptions) {
   let content = '';
   const { type, birthday } = options;
 
