@@ -3,3 +3,8 @@ export interface PoemOptions {
   birthday?: number; // 根据生日生成诗句，如：20210101
   tones?: string; // 平仄音规律：默认随机
 }
+
+export interface CommonOptions {
+  type?: 'Ancient' | 'Moden';
+  birthday?: number;
+}
